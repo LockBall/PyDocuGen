@@ -1,18 +1,27 @@
+import pandas as pd
 from docxtpl import DocxTemplate
 from datetime import date
 
-# Load the template
-doc = DocxTemplate("template.docx")
+# Load spreadsheet data
+df = pd.read_excel("data_sample.xlsx")   # or 
+# df = pd.read_csv("data.csv")
 
-# Define context for body placeholders only
+# Convert DataFrame to list of dicts for docxtpl
+records = df.to_dict(orient="records")
+
+# Load the Word template
+doc = DocxTemplate("template_sample.docx")
+
+# Define context for placeholders
 context = {
-    "name": "John",
-    "project": "AI Workflow Optimization",
-    "date": date.today().strftime("%B %d, %Y")
+    "name": "your_name",
+    "project": "auto doc gen",
+    "date": date.today().strftime("%d %B %Y"),
+    "table": records
 }
 
 # Render the document
 doc.render(context)
 
 # Save the generated file
-doc.save("generated_report.docx")
+doc.save("generated_report_with_table.docx")
