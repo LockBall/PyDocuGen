@@ -1,4 +1,6 @@
-generate a docx from a docx template and insert a table into the doc that contains data from a spreadsheet
+generate a docx document from a docx template and insert a table into the doc that contains data from an xlsx or csv spreadsheet / file  
+
+libre office supports docx and xlsx
 
 virtual environment if desired  
 ```python -m venv /path/to/new/virtual/environment```
