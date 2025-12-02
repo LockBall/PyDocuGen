@@ -1,13 +1,14 @@
-generate a docx from a docx template and insert a table that contains data from a spreadsheet
+generate a docx from a docx template and insert a table into the doc that contains data from a spreadsheet
 
-virtual environment if desired
-python -m venv /path/to/new/virtual/environment
+virtual environment if desired  
+```python -m venv /path/to/new/virtual/environment```
 
-install support packages
-pip install docxtpl
-pip install pandas openpyxl python-docx
+install support packages  
+```pip install docxtpl```  
+```pip install pandas openpyxl python-docx```  
 
-adjust your doc template
+adjust your doc template's static components  
+headers, footers, page numbers etc.  
 
-have a csv of the data
-Replace Column1, Column2, Column3 with the exact column names from your spreadsheet.
+have a ```*.csv``` or ```*.xlsx``` of the data  
+Replace ```Column1, Column2, Column3``` with the exact column names from your spreadsheet.
