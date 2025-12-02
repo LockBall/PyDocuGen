@@ -63,9 +63,9 @@ def generate_report():
 
         # Context for placeholders
         context = {
-            "name": "John",
-            "project": "AI Workflow Optimization",
-            "date": date.today().strftime("%B %d, %Y"),
+            "name": "your_name_here",
+            "project": "GUI DocuGen",
+            "date": date.today().strftime("%d %B %Y"),
             "table": records
         }
 
